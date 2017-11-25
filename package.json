@@ -1,0 +1,30 @@
+{
+  "name": "sequelized-burger",
+  "version": "1.0.0",
+  "description": "burger eat app with sequelized",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "handlebars": "^4.0.11",
+    "method-override": "^2.3.10",
+    "mysql2": "^1.5.1",
+    "sequelize": "^4.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "watch": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JJ-Code/sequelizedBurger.git"
+  },
+  "author": "jj-code",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JJ-Code/sequelizedBurger/issues"
+  },
+  "homepage": "https://github.com/JJ-Code/sequelizedBurger#readme"
+}
