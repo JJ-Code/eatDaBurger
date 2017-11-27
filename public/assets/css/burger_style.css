@@ -16,6 +16,10 @@ body {
     margin: 0px !important;
 }
 
+#customer-box {
+    height: 22px;
+}
+
 img{
     height: 320px !important;
     width: 650px !important;

@@ -17,7 +17,12 @@
                 <ul>
                     {{#each burgers}} {{#unless devoured}}
                     <div class="input-group">
-                        <li class="form-control">{{burger_name}}</li>
+                        <li class="form-control">
+                            <div class="col-md-7 col-xs-7"> {{id}}. {{burger_name}} </div>
+                            <div class="col-md-5 col-xs-5">
+                                <input id="customer-box" name="customer" type="text" class="form-control bugerEaterTextBox" placeholder="Customer Name">
+                            </div>
+                        </li>
                         <span class="input-group-btn">
                             <button class="btn btn-success change-eaten devour-button" type="submit" data-id="{{this.id}}" data-neweaten="{{devoured}}">
                                 {{#if devoured}}Eat Again{{else}}Devour It!{{/if}}</button>
@@ -37,16 +42,10 @@
             <div id="eaten">
 
                 <!-- Dynamically Insert Eaten Burgers Here -->
-                {{!-- {{#each burgers}} {{#if devoured}}
-                <div class="input-group">
-                    <li class="form-control">{{id}}. {{burger_name}}</li>
-                    <button class="btn btn-success devour-button" type="submit">Delete Burger!</button>
-                </div>
-                {{/if}} {{/each}} --}}
                 <ul>
                     {{#each burgers}} {{#if devoured}}
                     <div class="input-group">
-                        <li class="form-control"> {{burger_name}}</li>
+                        <li class="form-control"> {{id}}. {{burger_name}}</li>
                         <span class="input-group-btn">
                             <button class="btn btn-info" id="delete-button" type="submit" data-id="{{this.id}}" data-neweaten="{{devoured}}">
                                 Delete It!
