@@ -29,7 +29,13 @@
                 <div id="eat-up">
                     <!-- Dynamically Insert Ready Burgers Here -->
                     <div class="input-group">
-                        <li class="form-control">1. Bob's Burger</li>
+                        <li class="form-control">
+                            <div class="col-md-7 col-xs-7"> 1. Bob's Burger </div>
+
+                            <div class="col-md-5 col-xs-5">
+                                <input name="burgerEater" type="text" class="form-control bugerEaterTextBox" placeholder="Customer Name">
+                            </div>
+                        </li>
                         <span class="input-group-btn devour-button">
                             <button class="btn btn-success" type="button">Devour It!</button>
                         </span>
@@ -55,6 +61,9 @@
                     <!-- Dynamically Insert Eaten Burgers Here -->
                     <div class="input-group">
                         <li class="form-control">3. Krabby Patty</li>
+                        <div class="col-md-5 col-xs-5">
+                            <input name="burgerEater" type="text" class="form-control bugerEaterTextBox" placeholder="Customer Name">
+                        </div>
                         <span class="input-group-btn whine-button">
                             <button class="btn btn-info" type="button">Delete</button>
                         </span>

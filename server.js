@@ -5,9 +5,10 @@ var methodOverride = require('method-override')
 
 //Express config (telling node creating an express server):
 //================================================
-var PORT = process.env.PORT || 3012;
+var PORT = process.env.PORT || 3015;
 var app = express();
-
+// Requiring our models for syncing
+var db = require("./models");
 
 // Serve static content for the app from the "public" directory in the application directory.
 // =============================================================
@@ -28,7 +29,9 @@ app.set("view engine", "handlebars");
 
 // Routes
 // =============================================================
-require("./routes/api-routes.js")(app);
+require('./routes/api-routes.js')(app);
+require('./routes/html-routes.js')(app);
+
 
 
 // Syncing our sequelize models and then starting our Express app
