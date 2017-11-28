@@ -16,7 +16,7 @@ module.exports = function (app) {
             var hbsObject = {
                 burgers: dbBurgers
             };
-            console.log(hbsObject);
+            // console.log(hbsObject);
             res.render(path.join(__dirname, "../views/index.handlebars"), hbsObject);
         }); 
 

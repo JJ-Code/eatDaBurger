@@ -45,7 +45,7 @@
                 <ul>
                     {{#each burgers}} {{#if devoured}}
                     <div class="input-group">
-                        <li class="form-control"> {{id}}. {{burger_name}}</li>
+                        <li class="form-control"> {{id}}. {{burger_name}} devoured by {{CustomerId}} </li>
                         <span class="input-group-btn">
                             <button class="btn btn-info" id="delete-button" type="submit" data-id="{{this.id}}" data-neweaten="{{devoured}}">
                                 Delete It!
