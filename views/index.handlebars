@@ -43,9 +43,9 @@
 
                 <!-- Dynamically Insert Eaten Burgers Here -->
                 <ul>
-                    {{#each burgers}} {{#if devoured}}
+                    {{#each burgers}} {{#if this.devoured}}
                     <div class="input-group">
-                        <li class="form-control"> {{id}}. {{burger_name}} devoured by {{CustomerId}} </li>
+                        <li class="form-control"> {{this.id}}. {{this.burger_name}} devoured by {{this.customer.name}} </li>
                         <span class="input-group-btn">
                             <button class="btn btn-info" id="delete-button" type="submit" data-id="{{this.id}}" data-neweaten="{{devoured}}">
                                 Delete It!
