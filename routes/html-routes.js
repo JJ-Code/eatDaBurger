@@ -15,6 +15,7 @@ module.exports = function (app) {
         db.Burgers.findAll({}).then(function (dbBurgers) {
             var hbsObject = {
                 burgers: dbBurgers
+                //sequalize join query 
             };
             // console.log(hbsObject);
             res.render(path.join(__dirname, "../views/index.handlebars"), hbsObject);

@@ -23,33 +23,35 @@ module.exports = function (app) {
     }); //end of post 
 
     app.put("/api/burgers/:id", function (req, res) {
+        console.log(req.body);
         db.Customers.create({
-            name: req.body.customerName   
-    })
+                name: req.body.customerName
+            })
 
 
-    .then(function (dbCustomer) {
-        console.log(dbCustomer.dataValues.id);
-        console.log(req.body.newBurgerState.devoured);
-        db.Burgers.update({
-            devoured: req.body.newBurgerState.devoured,
-            CustomerId: dbCustomer.dataValues.id
+            .then(function (dbCustomer) {
+                console.log(dbCustomer.dataValues.id);
+                console.log(req.body.newBurgerState.devoured);
+                db.Burgers.update({
+                    devoured: req.body.newBurgerState.devoured,
+                    CustomerId: dbCustomer.dataValues.id
 
-        }, {
-            where: {
-                id: req.params.id //params grabs from url 
-            }
+                }, {
+                    where: {
+                        id: req.params.id //params grabs from url 
+                    }
 
-            }).then(function (dbBurgers) {
-                res.json(dbBurgers);
-        })      
+                }).then(function (dbBurgers) {
+                    console.log(dbBurgers);
+                    res.json(dbBurgers);
+                })
 
-    }) // the first then promise
-  
-        
-        .catch(function (err) {
-            res.json(err);
-        });
+            }) // the first then promise
+
+
+            .catch(function (err) {
+                res.json(err);
+            });
     }); //end of put aka update
 
     app.delete("/api/burgers/:id", function (req, res) {
