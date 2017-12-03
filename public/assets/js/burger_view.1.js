@@ -1,11 +1,11 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 // var customerName;
 
-// Make sure we wait to attach our handlers until the DOM is fully loaded.
+
 $(document).ready(function () {
     $(".change-eaten").on("click", function (event) {
-        var customerName = $("#customer-box").val().trim()
-        console.log("change eaten click");
+        
+        var customerName = $(".customer-box").val().trim()
         console.log(customerName);
         //Burger Info
         var id = $(this).data("id");
@@ -26,16 +26,16 @@ $(document).ready(function () {
             type: "PUT",
             data: {
                 customerName: customerName,
-                newBurgerState: newBurgerState
-            }
-
+                newBurgerState: newBurgerState}
+    
         }).done(
-            function () {
+            function (response) {
+                console.log(response);
                 // Reload the page to get the updated list
-                location.reload();
-
+                // location.reload();
+              
             }
-            );
+        );
     }); //end of put
 
 
@@ -59,7 +59,7 @@ $(document).ready(function () {
                 location.reload();
                 $("#new_burger").val("");
             }
-            );
+        );
     }); //end of post 
 
     $("#delete-button").on("click", function (event) {
@@ -74,7 +74,7 @@ $(document).ready(function () {
                 // Reload the page to get the updated list
                 location.reload();
             }
-            );
+        );
     });
 
 
