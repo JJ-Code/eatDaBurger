@@ -53,7 +53,8 @@ $(document).ready(function () {
         $.ajax("/api/burgers", {
             type: "POST",
             data: newBurger
-        }).done(
+        })
+        .done(
             function () {
                 // Reload the page and clear input box 
                 location.reload();
