@@ -42,6 +42,8 @@ module.exports = function (app) {
                     }
 
                 }).then(function (dbBurgers) {
+                    //include here?
+
                     console.log(dbBurgers);
                     res.json(dbBurgers);
                 })

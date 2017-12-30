@@ -5,9 +5,6 @@ Description
 
 This application demonstrates a simple full stack application with a front end implemented with HTML/CSS and elements from the Bootstrap framework and the backend implemented with Node.js and Express. HTML templating is done with the help of Handlebars.
 
-Demo
-
-The demo of the burger eating application can be found here.
 
 Installation
 
@@ -20,3 +17,7 @@ To run the application locally
 3) Create database and data by by sourcing db folder
 
 4) Now, open the local application on port 3012 at the URL: http://localhost:3012/
+
+
+![SequalizeBurger](/public/assets/img/sequalizeburger.png?raw=true)
+
